@@ -1,0 +1,6 @@
+.menu-item-title {
+  @apply text-red-800;
+}
+footer {
+  @apply flex bg-dark-blue text-white pt-[140px] mx-auto justify-center;
+}

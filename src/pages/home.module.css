@@ -1,0 +1,10 @@
+/* novo estilo da home */
+.hero {
+  padding: 92px 0 0;
+  /* @apply 2xl:px-0; */
+}
+
+.section {
+  @apply container flex justify-between mx-auto;
+  padding: 140px 0;
+}

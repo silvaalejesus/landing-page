@@ -1,0 +1,36 @@
+li {
+  @apply flex gap-5;
+}
+
+.card {
+  @apply border-2 border-sky-500 rounded-10 py-10 px-11 flex-1;
+  min-height: 640px;
+}
+
+.card_title {
+  @apply text-p1-semibold font-bold;
+}
+
+.card_price {
+  @apply text-h4 font-bold;
+}
+
+.card_features {
+  @apply flex flex-col gap-7 my-6;
+}
+
+.card_description {
+  @apply text-p2-medium font-medium;
+}
+
+.highlighted {
+  @apply bg-dark-blue text-secondary-100 py-20 shadow-lg border-none;
+}
+
+.highlighted .card_price {
+  @apply text-secondary-300;
+}
+
+.highlighted Button {
+  @apply bg-light-blue border-none;
+}

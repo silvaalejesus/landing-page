@@ -1,0 +1,25 @@
+/* Card.module.css */
+.card {
+  @apply bg-white rounded-lg flex-1;
+  /* max-height: 550px;
+  width: 800px; */
+  height: 34rem;
+  overflow: hidden;
+  /* Utilize classes de layout do Tailwind para criar um grid responsivo */
+  /* @apply grid grid-cols-1 md:grid-cols-2 gap-4; */
+}
+
+.cardImage {
+  border-radius: 0.5rem;
+  object-fit: cover;
+  /* width: 100%; */
+  height: 100%;
+  /* max-width: 824px;
+  max-height: 549px; */
+  /* margin: 0 auto; */
+  display: block;
+}
+
+.cardContent {
+  padding: 20px;
+}

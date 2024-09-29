@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Global css */
+.h1-title {
+  @apply text-h1 font-bold leading-tight;
+}
+.h2-title {
+  @apply text-h2 font-bold leading-tight;
+}
+.h4-title {
+  @apply text-h4 font-bold leading-tight;
+}
+
+.p1-semibold {
+  @apply text-p1-semibold font-semibold;
+}
+
+.p2-medium {
+  @apply text-p2-medium font-medium;
+}
+
+.p2-regular {
+  @apply text-p2-regular font-medium;
+}
+
+.p3-regular {
+  @apply text-p3-regular;
+}
+
+option {
+  @apply appearance-none bg-transparent cursor-pointer text-black border-none;
+}
+/* select {
+  @apply p-10;
+} */
+
+section {
+  @apply px-8 2xl:px-0;
+}

@@ -1,0 +1,7 @@
+.section {
+  /* mx-auto */
+  /* @apply container 2xl:mx-auto h-screen py-16 lg:px-8 2xl:px-0; */
+  @apply container flex justify-between mx-auto;
+  /* height: 100vh; */
+  padding: 140px 0;
+}
