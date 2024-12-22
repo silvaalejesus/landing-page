@@ -9,9 +9,11 @@ interface IContainer {
   buttonText: string;
   textColor?: string;
   textButtonColor?: string;
-  imageSrc: any;
-  cardWidth?: string;
+  imageSrc?: any;
+  cardWidth?: boolean;
   isReverse?: boolean;
+  stylesContent?: string;
+  stylesButton?: string;
 }
 const Container: React.FC<IContainer> = ({
   title,
@@ -22,28 +24,32 @@ const Container: React.FC<IContainer> = ({
   isReverse = false,
   textButtonColor = "white",
   textColor = "white",
+  stylesContent,
+  stylesButton,
 }) => {
   return (
     <div
-      className={`${styles.section} flex items-center ${isReverse && "flex-row-reverse"}`}
+      className={`${styles.section} flex items-center ${isReverse && "lg:flex-row-reverse"}`}
     >
-      <div className={`${cardWidth || "w-1/2"}  px-4`}>
-        <h2 className={`text-h2 text-${textColor} font-bold leading-tight`}>
+      <div className={`${styles.content} ${stylesContent}`}>
+        <h2 className={`text-h2 text-${textColor} font-bold leading-tight `}>
           {title}
         </h2>
         <p className={`text-p2-regular text-${textColor} mt-6 mb-14`}>
           {description}
         </p>
         <Button
-          className={`bg-light-blue text-${textButtonColor}`}
+          className={`bg-light-blue text-${textButtonColor} ${stylesButton}`}
           icon={ArrowRight}
         >
           {buttonText}
         </Button>
       </div>
-      <div>
-        <CardImage imageSrc={imageSrc} />
-      </div>
+      {imageSrc && (
+        <div>
+          <CardImage imageSrc={imageSrc} />
+        </div>
+      )}
     </div>
   );
 };

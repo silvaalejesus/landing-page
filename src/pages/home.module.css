@@ -1,10 +1,14 @@
 /* novo estilo da home */
 .hero {
-  padding: 92px 0 0;
-  /* @apply 2xl:px-0; */
+  /* padding: 92px 0 0; */
+  @apply py-0 lg:py-[92px];
 }
 
 .section {
   @apply container flex justify-between mx-auto;
   padding: 140px 0;
+}
+
+.temp .content {
+  color: red;
 }

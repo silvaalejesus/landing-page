@@ -1,7 +1,20 @@
 .section {
   /* mx-auto */
   /* @apply container 2xl:mx-auto h-screen py-16 lg:px-8 2xl:px-0; */
-  @apply container flex justify-between mx-auto;
+  @apply container flex justify-between mx-auto flex-col lg:flex-row;
   /* height: 100vh; */
   padding: 140px 0;
 }
+
+.content {
+  @apply lg:px-4 text-center flex flex-col justify-center items-center lg:text-left lg:items-start;
+}
+/*
+sm -> 640
+md -> 768 tablet
+lg -> 1024
+xl -> 1280
+2xl -> 1536
+*/
+
+/* do md pra baixo é flex column */

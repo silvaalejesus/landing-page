@@ -1,37 +1,44 @@
-import Avatar from "./Avatar";
-import IconQuote from "./IconQuote";
-import Info from "./Info";
+import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { opinions } from "../../mocks/clientOpinion";
+import CardClient from "./CardClient";
+import PageIndicator from "./PageIndicator";
 
-interface ICardProps {
-  citation: string;
-  author: string;
-  jobTitle: string;
-  imageSrc: string;
-  isBlue?: boolean;
-}
+const Card = () => {
+  const carousel = useRef();
+  const [width, setWidth] = useState(0);
 
-const CardClient: React.FC<ICardProps> = ({
-  citation,
-  author,
-  jobTitle,
-  imageSrc,
-  isBlue = false,
-}) => {
+  useEffect(() => {
+    setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
+  }, []);
+
   return (
-    <div
-      className={`card py-[60px] px-6 shadow-lg rounded-10 ${isBlue && "bg-light-blue"}`}
-    >
-      <div className="citation">
-        <IconQuote isBlue={isBlue} />
-        <p className={`pt-8 pb-10 ${isBlue && "text-white"}`}>{citation}</p>
-      </div>
-      <div className="border-[1px] mb-[60px]"></div>
-      <div className="author-info flex gap-[42px] items-center">
-        <Avatar imageSrc={imageSrc} />
-        <Info isBlueCard={isBlue} author={author} jobTitle={jobTitle} />
-      </div>
-    </div>
+    <>
+      <motion.div
+        ref={carousel}
+        className="carousel relative overflow-hidden"
+        whileTap={{ cursor: "grabbing" }}
+      >
+        <motion.div
+          className="flex gap-8"
+          drag="x"
+          initial={false}
+          // animate={controls}
+          dragConstraints={{
+            right: 0,
+            left: -width,
+          }}
+        >
+          {opinions.map((opinion, index) => (
+            <CardClient key={index} {...opinion} />
+          ))}
+        </motion.div>
+        <div>
+          <PageIndicator activeIndex={1} totalSlides={3} />
+        </div>
+      </motion.div>
+    </>
   );
 };
 
-export default CardClient;
+export default Card;

@@ -1,13 +1,6 @@
 .container_header {
-  /* margin-top: 16px; */
-  /* flex-wrap: wrap; */
-  /* mx-auto */
-  /* @apply flex justify-evenly items-center py-4 lg:px-8 2xl:px-0 bg-red-500 mx-auto; */
   @apply container flex 2xl:px-0 justify-between px-8 items-center py-4  mx-auto;
-  /* max-width: 1920px; */
-  /* @apply flex justify-between items-center py-4 container fixed 2xl:mx-auto lg:px-8 2xl:px-0; */
 }
-/*  space-between e paddin */
 .nav_links {
   @apply flex items-center text-white gap-8;
 }

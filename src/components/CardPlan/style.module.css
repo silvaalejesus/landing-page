@@ -3,8 +3,8 @@ li {
 }
 
 .card {
-  @apply border-2 border-sky-500 rounded-10 py-10 px-11 flex-1;
-  min-height: 640px;
+  @apply border-2 border-sky-500 rounded-10 py-10 px-11 min-w-[470px] lg:min-w-0;
+  /* min-height: 640px; */
 }
 
 .card_title {
@@ -23,6 +23,8 @@ li {
   @apply text-p2-medium font-medium;
 }
 
+/* highlighted card */
+
 .highlighted {
   @apply bg-dark-blue text-secondary-100 py-20 shadow-lg border-none;
 }
@@ -33,4 +35,14 @@ li {
 
 .highlighted Button {
   @apply bg-light-blue border-none;
+}
+
+/* carousel */
+
+.carousel {
+  @apply overflow-hidden lg:cursor-auto w-full;
+}
+
+.inner {
+  @apply flex gap-8;
 }

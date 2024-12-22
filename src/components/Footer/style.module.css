@@ -2,5 +2,5 @@
   @apply text-red-800;
 }
 footer {
-  @apply flex bg-dark-blue text-white pt-[140px] mx-auto justify-center;
+  @apply flex bg-dark-blue text-white lg:pt-[140px] mx-auto justify-center px-8;
 }

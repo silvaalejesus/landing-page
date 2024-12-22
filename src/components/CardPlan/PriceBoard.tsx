@@ -1,14 +1,25 @@
+import { useMediaQuery } from "react-responsive";
 import Card from ".";
-import { cards } from "../../mocks/cards";
+import { cardsData } from "../../mocks/cardsData";
+import Carousel from "./Carousel";
+import styles from "./style.module.css";
 
-function PriceBoard() {
+const PriceBoard = () => {
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
   return (
-    <div className="flex gap-8">
-      {cards.map((card, index) => (
-        <Card key={index} {...card} />
-      ))}
-    </div>
+    <>
+      {isMobile ? (
+        <Carousel />
+      ) : (
+        <div className={styles.inner}>
+          {cardsData.map((card, index) => (
+            <Card key={index} {...card} />
+          ))}
+        </div>
+      )}
+    </>
   );
-}
+};
 
 export default PriceBoard;
