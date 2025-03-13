@@ -12,3 +12,7 @@
 .temp .content {
   color: red;
 }
+
+.imgsla img {
+  object-fit: fill;
+}

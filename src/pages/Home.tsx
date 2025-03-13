@@ -38,7 +38,7 @@ const Home = () => {
           />
         </section>
 
-        {/* section 1 */}
+        {/* Project Management */}
         <section>
           <Container
             textColor="black"
@@ -46,6 +46,9 @@ const Home = () => {
             description="Images, videos, PDFs and audio files are supported. Create math expressions and diagrams directly from the app. Take photos with the mobile app and save them to a note."
             buttonText="Get Started"
             imageSrc="https://images.unsplash.com/photo-1567422252597-bd99bc6a0c29?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // Replace with your image URL
+            // stylesContent={"w-[75%]"}
+            // stylesTitle="w-1/2"
+            // stylesDescription="w-[80%]"
           />
         </section>
 
@@ -58,6 +61,7 @@ const Home = () => {
             description="With whitepace, share your notes with your colleagues and collaborate on them. You can also publish a note to the internet and share the URL with others."
             buttonText="Try it now"
             imageSrc={sla}
+            stylesImage={`${styles.imgsla} mr-24 w-full `}
           />
         </section>
 

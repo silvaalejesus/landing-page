@@ -32,10 +32,10 @@ export const Footer = () => {
               <MenuItem key={item.label} item={item} />
             ))}
             <div className="w-1/3 call-to-action gap-6 lg:max-w-[260px]">
-              <h5 className="text-center lg:text-left font-bold text-h5">
+              <h5 className="text-center font-bold text-h5 lg:text-left">
                 Try It Today
               </h5>
-              <p className="py-6">
+              <p className="py-6 w-[90%] lg:w-full">
                 Get started for free. Add your whole team as your needs grow.
               </p>
               <Button
