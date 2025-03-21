@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const PageIndicator = ({ currentPage, totalPages, onClick }) => {
+const PageIndicator = ({ currentPage, totalPages, onClick }: any) => {
   const variants = {
     active: { scale: 1.2 },
     inactive: { scale: 1 },

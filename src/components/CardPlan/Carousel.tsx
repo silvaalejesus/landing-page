@@ -5,7 +5,7 @@ import Card from "./index";
 import styles from "./style.module.css";
 
 const Carousel = () => {
-  const carousel = useRef();
+  const carousel = useRef<any>();
   const [width, setWidth] = useState(0);
   const controls = useAnimation();
 

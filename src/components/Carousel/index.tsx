@@ -3,18 +3,21 @@ import { useState } from "react";
 //   BsFillArrowRightCircleFill,
 //   BsFillArrowLeftCircleFill,
 // } from "react-icons/bs";
-export default function Carousel({ slides }: any) {
+interface CarouselProps {
+  slides: string[]; // Define o tipo de slides como um array de strings
+}
+export default function Carousel({ slides }: CarouselProps) {
   const [current, setCurrent] = useState(0);
 
-  const previousSlide = () => {
-    if (current === 0) setCurrent(slides.length - 1);
-    else setCurrent(current - 1);
-  };
+  // const previousSlide = () => {
+  //   if (current === 0) setCurrent(slides.length - 1);
+  //   else setCurrent(current - 1);
+  // };
 
-  const nextSlide = () => {
-    if (current === slides.length - 1) setCurrent(0);
-    else setCurrent(current + 1);
-  };
+  // const nextSlide = () => {
+  //   if (current === slides.length - 1) setCurrent(0);
+  //   else setCurrent(current + 1);
+  // };
 
   return (
     <div className="overflow-hidden relative">
@@ -39,7 +42,7 @@ export default function Carousel({ slides }: any) {
       </div> */}
 
       <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">
-        {slides.map((s, i) => {
+        {slides.map((_, i) => {
           return (
             <div
               onClick={() => {

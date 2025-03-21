@@ -5,14 +5,16 @@ import CardClient from "./CardClient";
 import PageIndicator from "./PageIndicator";
 
 const Card = () => {
-  const carousel = useRef();
-  const [width, setWidth] = useState(0);
+  const carousel = useRef<HTMLElement | null>(null);
+  const [_, setWidth] = useState<number | undefined>(undefined);
   const [currentPage, setCurrentPage] = useState(0);
   const cardsPerPage = 3;
   const totalPages = Math.ceil(opinions.length / cardsPerPage);
 
   useEffect(() => {
-    setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth);
+    if (carousel.current) {
+      setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+    }
   }, []);
 
   useEffect(() => {
@@ -27,10 +29,10 @@ const Card = () => {
 
     const currentCarousel = carousel.current; // Mantém referência ao carrossel atual
 
-    currentCarousel.addEventListener("scroll", handleScroll); // Ouvinte de evento de rolagem
+    currentCarousel?.addEventListener("scroll", handleScroll); // Ouvinte de evento de rolagem
 
     return () => {
-      currentCarousel.removeEventListener("scroll", handleScroll); // Remove o ouvinte ao desmontar
+      currentCarousel?.removeEventListener("scroll", handleScroll); // Remove o ouvinte ao desmontar
     };
   }, []); // Executa apenas uma vez na montagem e desmontagem do componente
 
@@ -43,7 +45,7 @@ const Card = () => {
     }
   };
 
-  const handleIndicatorClick = (page) => {
+  const handleIndicatorClick = (page: any) => {
     setCurrentPage(page);
     if (carousel.current) {
       carousel.current.scrollTo({

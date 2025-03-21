@@ -1,4 +1,4 @@
-import React from "react";
+import React, { AnchorHTMLAttributes } from "react";
 
 interface StyledMenuProps {
   isOpen: boolean;
@@ -16,7 +16,7 @@ const Menu: React.FC<StyledMenuProps> = ({ isOpen, children }) => {
         if (React.isValidElement(child) && child.type === "a") {
           return React.cloneElement(child, {
             className: `text-2xl uppercase p-8 font-bold tracking-[0.5rem] no-underline transition-colors duration-300 text-center md:text-left text-xl md:text-2xl`,
-          });
+          } as AnchorHTMLAttributes<HTMLAnchorElement>);
         }
         return child;
       })}

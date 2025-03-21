@@ -11,7 +11,7 @@ const Link: React.FC<LinkProps> = ({ text, href }) => {
   return (
     <a href={href} className="p2-regular flex gap-2.5 items-center">
       {text}
-      <img src={DownArrow} alt="" srcset="" />
+      <img src={DownArrow} alt="seta" />
     </a>
   );
 };
