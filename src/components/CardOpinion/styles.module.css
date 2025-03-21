@@ -1,0 +1,11 @@
+.container {
+  @apply py-[60px] px-6 shadow-lg rounded-10;
+}
+
+.author_info {
+  @apply flex gap-[42px] items-center;
+}
+
+.citation {
+  @apply pt-8 pb-10;
+}

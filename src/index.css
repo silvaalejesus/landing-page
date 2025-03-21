@@ -4,7 +4,7 @@
 
 /* Global css */
 .h1-title {
-  @apply text-h1 font-bold leading-tight;
+  @apply text-4xl sm:text-h1 font-bold leading-tight;
 }
 .h2-title {
   @apply text-h2 font-bold leading-tight;
@@ -37,5 +37,5 @@ option {
 } */
 
 section {
-  @apply px-8 2xl:px-0;
+  @apply px-5 lg:px-8 2xl:px-0;
 }

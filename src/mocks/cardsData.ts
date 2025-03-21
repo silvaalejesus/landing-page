@@ -1,4 +1,4 @@
-export const cards = [
+export const cardsData = [
   {
     title: "Free",
     description: "Capture ideas and find them quickly",
