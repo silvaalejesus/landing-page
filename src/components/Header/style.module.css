@@ -1,5 +1,5 @@
 .container_header {
-  @apply container flex 2xl:px-0 justify-between px-8 items-center py-4  mx-auto;
+  @apply container flex justify-between items-center p-4  mx-auto;
 }
 .nav_links {
   @apply flex items-center text-white gap-8;

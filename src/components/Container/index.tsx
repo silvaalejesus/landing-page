@@ -37,7 +37,7 @@ const Container: React.FC<IContainer> = ({
     >
       <div className={`${styles.content} ${stylesContent}`}>
         <h2
-          className={`text-h2 text-${textColor} font-bold leading-tight ${stylesTitle}`}
+          className={`text-h4 sm:text-h2 text-${textColor} font-bold leading-tight ${stylesTitle}`}
         >
           {title}
         </h2>

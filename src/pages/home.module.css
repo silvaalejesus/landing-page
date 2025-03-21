@@ -5,8 +5,8 @@
 }
 
 .section {
-  @apply container flex justify-between mx-auto;
-  padding: 140px 0;
+  @apply container flex justify-between mx-auto py-20 sm:py-36;
+  /* padding: 140px 0; */
 }
 
 .temp .content {

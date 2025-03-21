@@ -61,14 +61,14 @@ const Home = () => {
             description="With whitepace, share your notes with your colleagues and collaborate on them. You can also publish a note to the internet and share the URL with others."
             buttonText="Try it now"
             imageSrc={sla}
-            stylesImage={`${styles.imgsla} mr-24 w-full `}
+            stylesImage={`${styles.imgsla} lg:mr-24 lg:w-full `}
           />
         </section>
 
         {/* section 3*/}
         <section className="bg-dark-blue">
           <Container
-            title="Use as Ehxtension"
+            title="Use as Extension"
             description="Use the web clipper extension, available on Chrome and Firefox, to save web pages or take screenshots as notes."
             buttonText="Let's Go"
             imageSrc="https://images.unsplash.com/photo-1623184158370-e306f4634af7?q=80&w=3546&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -101,13 +101,14 @@ const Home = () => {
               Android and iOS. A terminal app is also available!"
             buttonText="Try Taskey"
             stylesContent="text-start items-start lg:text-center lg:flex lg:items-center"
+            stylesButton="mb-0"
           />
         </section>
 
         {/* section 6 - clients says */}
         <section className="overflow-hidden">
           <div className={`${styles.section} flex-col overflow-hidden`}>
-            <h1 className="text-h1 font-bold text-center pb-[60px]">
+            <h1 className=" text-4xl sm:text-h1 font-bold text-center pb-[60px]">
               What Our Clients Says
             </h1>
             <Card />
@@ -117,11 +118,11 @@ const Home = () => {
         {/* section 7 */}
         <section className="bg-dark-blue text-secondary-100">
           <div
-            className={`${styles.section} flex-col items-start lg:items-center`}
+            className={`${styles.section} pt-24 flex-col items-start lg:items-center`}
           >
             <div className="lg:text-center w-1/2">
               <h1 className="h1-title">Try Whitepace today</h1>
-              <div className="text-2xl pt-6 pb-10">
+              <div className="text-lg sm:text-2xl pt-6 pb-10">
                 <p>Get started for free.</p>
                 <p>Add your whole team as your needs grow.</p>
               </div>
@@ -130,11 +131,13 @@ const Home = () => {
               Try Taskey free
             </Button>
 
-            <p className="my-10 text-2xl">On a big team? Contact sales</p>
+            <p className="text-lg my-10 sm:text-2xl">
+              On a big team? Contact sales
+            </p>
             <div className="flex gap-10">
-              <img src={apple} alt="" />
-              <img src={windows} alt="" />
-              <img src={android} alt="" />
+              <img className="w-9 sm:w-full" src={apple} alt="" />
+              <img className="w-9 sm:w-full" src={windows} alt="" />
+              <img className="w-9 sm:w-full" src={android} alt="" />
             </div>
           </div>
         </section>

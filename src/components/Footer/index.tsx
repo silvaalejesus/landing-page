@@ -20,8 +20,8 @@ export const Footer = () => {
     <footer className={`${styles.footer}`}>
       <div className="w-full container">
         <nav className="pb-[100px]">
-          <div className=" flex flex-col lg:flex-row gap-[100px]">
-            <div className="lg:max-w-[240px]">
+          <div className=" flex flex-col lg:flex-row gap-20 sm:gap-[100px] text-center sm:text-left">
+            <div className="lg:max-w-[240px] flex flex-col items-center sm:items-justify sm:items-start">
               <img src={Logo} alt="Logo" width={144} className="pb-[15px]" />
               <p>
                 whitepace was created for the new ways we live and work. We make
@@ -31,7 +31,7 @@ export const Footer = () => {
             {menuItems.map((item) => (
               <MenuItem key={item.label} item={item} />
             ))}
-            <div className="w-1/3 call-to-action gap-6 lg:max-w-[260px]">
+            <div className="w-full flex items-center flex-col sm:items-start sm:w-1/3 call-to-action sm:gap-6 lg:max-w-[260px]">
               <h5 className="text-center font-bold text-h5 lg:text-left">
                 Try It Today
               </h5>
@@ -48,10 +48,10 @@ export const Footer = () => {
           </div>
         </nav>
         <div className="hidden lg:block pb-8 border-t-2 border-[#2E4E73]"></div>
-        <div className="copyright pb-8 flex justify-between flex-wrap">
-          <div className="pb-10 flex justify-between lg:pb-0">
+        <div className="copyright pb-8 flex justify-between flex-wrap flex-col md:flex-row">
+          <div className="pb-10 flex justify-between lg:pb-0 flex-col sm:flex-row">
             <LanguageSelector />
-            <div className="flex lg:ml-[3.75rem] gap-[3.75rem]">
+            <div className="flex lg:ml-[3.75rem] gap-5 sm:gap-[3.75rem] flex-col sm:flex-row">
               <a href="#">Terms & privacy</a>
               <a href="#">Security</a>
               <a href="#">Status</a>
